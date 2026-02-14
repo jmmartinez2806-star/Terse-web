@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi página web - Tarea</title>
+  <meta name="description" content="Página web sencilla para tarea escolar." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="container header">
+    <div>
+      <h1>Mi Página Web</h1>
+      <p class="subtitle">Proyecto para tarea • Hecho con HTML + CSS</p>
+    </div>
+    <a class="btn" href="#contacto">Contacto</a>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>¿De qué trata?</h2>
+      <p>
+        Esta es una página web simple para demostrar estructura básica: encabezado,
+        secciones, tarjetas, lista de habilidades y un formulario de contacto (de ejemplo).
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Sobre mí</h2>
+        <p>
+          Hola, soy <strong>Tu Nombre</strong>. Me gusta aprender tecnología y crear proyectos.
+          Esta página es parte de una actividad escolar.
+        </p>
+        <ul class="list">
+          <li>📌 Ciudad: San Luis Potosí</li>
+          <li>🎯 Meta: aprobar la tarea 😄</li>
+          <li>💻 Herramientas: HTML, CSS</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Mis habilidades</h2>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">Diseño</span>
+          <span class="tag">Presentaciones</span>
+        </div>
+
+        <h3 class="mt">Lo que aprendí</h3>
+        <ol class="list">
+          <li>Estructura básica con etiquetas HTML.</li>
+          <li>Estilos con CSS (colores, márgenes, tipografía).</li>
+          <li>Diseño responsive para celular.</li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>Galería (opcional)</h2>
+      <p>Si quieres, reemplaza estas “tarjetas” por fotos o capturas de tu proyecto.</p>
+      <div class="gallery">
+        <div class="ph">Imagen 1</div>
+        <div class="ph">Imagen 2</div>
+        <div class="ph">Imagen 3</div>
+      </div>
+    </section>
+
+    <section id="contacto" class="card">
+      <h2>Contacto</h2>
+      <p class="hint">
+        *Este formulario es de ejemplo (no envía a ningún lado). Para que envíe, se
+        conecta a un servicio como Formspree.
+      </p>
+
+      <form class="form" onsubmit="return false;">
+        <label>
+          Nombre
+          <input type="text" placeholder="Tu nombre" />
+        </label>
+
+        <label>
+          Correo
+          <input type="email" placeholder="tunombre@email.com" />
+        </label>
+
+        <label>
+          Mensaje
+          <textarea rows="4" placeholder="Escribe algo..."></textarea>
+        </label>
+
+        <button class="btn" type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Tu Nombre • Hecho para la tarea</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
