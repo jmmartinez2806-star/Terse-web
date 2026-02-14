@@ -6,23 +6,54 @@
   <title>Mi página web - Tarea</title>
   <meta name="description" content="Página web sencilla para tarea escolar." />
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .rock-btn{
+      margin-top:15px;
+      background: linear-gradient(135deg, #ff3c3c, #ffae00);
+      color:white;
+      font-weight:bold;
+      padding:12px 18px;
+      border:none;
+      border-radius:12px;
+      cursor:pointer;
+      font-size:16px;
+      transition:0.3s;
+    }
+    .rock-btn:hover{
+      transform: scale(1.05);
+      box-shadow:0 0 15px rgba(255,0,0,0.6);
+    }
+  </style>
 </head>
 
 <body>
+
+  <!-- 🎸 Video oculto -->
+  <iframe 
+    id="musicFrame"
+    width="0" 
+    height="0" 
+    src=""
+    frameborder="0"
+    allow="autoplay"
+    allowfullscreen>
+  </iframe>
+
   <header class="container header">
     <div>
       <h1>Mi Página Web</h1>
       <p class="subtitle">Proyecto para tarea • Hecho con HTML + CSS</p>
+      <button class="rock-btn" onclick="playMusic()">🔥 Entrar con Rock</button>
     </div>
-    <a class="btn" href="#contacto">Contacto</a>
   </header>
 
   <main class="container">
     <section class="card">
       <h2>¿De qué trata?</h2>
       <p>
-        Esta es una página web simple para demostrar estructura básica: encabezado,
-        secciones, tarjetas, lista de habilidades y un formulario de contacto (de ejemplo).
+        Esta es una página web simple para demostrar estructura básica,
+        secciones, tarjetas y diseño responsivo.
       </p>
     </section>
 
@@ -33,11 +64,6 @@
           Hola, soy <strong>Tu Nombre</strong>. Me gusta aprender tecnología y crear proyectos.
           Esta página es parte de una actividad escolar.
         </p>
-        <ul class="list">
-          <li>📌 Ciudad: San Luis Potosí</li>
-          <li>🎯 Meta: aprobar la tarea 😄</li>
-          <li>💻 Herramientas: HTML, CSS</li>
-        </ul>
       </article>
 
       <article class="card">
@@ -48,51 +74,7 @@
           <span class="tag">Diseño</span>
           <span class="tag">Presentaciones</span>
         </div>
-
-        <h3 class="mt">Lo que aprendí</h3>
-        <ol class="list">
-          <li>Estructura básica con etiquetas HTML.</li>
-          <li>Estilos con CSS (colores, márgenes, tipografía).</li>
-          <li>Diseño responsive para celular.</li>
-        </ol>
       </article>
-    </section>
-
-    <section class="card">
-      <h2>Galería (opcional)</h2>
-      <p>Si quieres, reemplaza estas “tarjetas” por fotos o capturas de tu proyecto.</p>
-      <div class="gallery">
-        <div class="ph">Imagen 1</div>
-        <div class="ph">Imagen 2</div>
-        <div class="ph">Imagen 3</div>
-      </div>
-    </section>
-
-    <section id="contacto" class="card">
-      <h2>Contacto</h2>
-      <p class="hint">
-        *Este formulario es de ejemplo (no envía a ningún lado). Para que envíe, se
-        conecta a un servicio como Formspree.
-      </p>
-
-      <form class="form" onsubmit="return false;">
-        <label>
-          Nombre
-          <input type="text" placeholder="Tu nombre" />
-        </label>
-
-        <label>
-          Correo
-          <input type="email" placeholder="tunombre@email.com" />
-        </label>
-
-        <label>
-          Mensaje
-          <textarea rows="4" placeholder="Escribe algo..."></textarea>
-        </label>
-
-        <button class="btn" type="submit">Enviar</button>
-      </form>
     </section>
 
     <footer class="footer">
@@ -102,6 +84,12 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    function playMusic(){
+      document.getElementById("musicFrame").src =
+      "https://www.youtube.com/embed/l482T0yNkeo?autoplay=1";
+    }
   </script>
+
 </body>
 </html>
